@@ -39,7 +39,9 @@ module Decidim
         def attributes
           result = {
             title: form.title,
-            description: form.description
+            description: form.description,
+            collect_user_extra_fields: form.collect_user_extra_fields,
+            extra_fields_legal_information: form.extra_fields_legal_information
           }
 
           result[:banner_image] = form.banner_image unless form.banner_image.nil?
