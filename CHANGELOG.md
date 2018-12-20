@@ -7,6 +7,7 @@
 
 **Added**:
 
+- **decidim-initiatives**: Add option to initiative types to collect personal data on signature and make related changes in front [\#4690](https://github.com/decidim/decidim/pull/4690)
 
 **Changed**:
 
