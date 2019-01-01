@@ -3,6 +3,8 @@
 module Decidim
   # Initiative type.
   class InitiativesType < ApplicationRecord
+    include Decidim::HasResourcePermission
+
     validates :title, :description, presence: true
 
     mount_uploader :banner_image, Decidim::BannerImageUploader
@@ -16,5 +18,9 @@ module Decidim
              class_name: "Decidim::InitiativesTypeScope",
              dependent: :destroy,
              inverse_of: :type
+
+    def allow_resource_permissions?
+      true
+    end
   end
 end
