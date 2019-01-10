@@ -25,8 +25,9 @@ module Decidim
 
     let(:permission) do
       {
-        "authorization_handler_name" => "dummy_authorization_handler",
-        "options" => options
+        "authorization_handlers" => {
+          "dummy_authorization_handler" => { "options" => options }
+        }
       }
     end
 
@@ -213,8 +214,9 @@ module Decidim
         let(:permissions_for_resource) do
           {
             action_for_resource => {
-              "authorization_handler_name" => "another_dummy_authorization_handler",
-              "options" => {}
+              "authorization_handlers" => {
+                "another_dummy_authorization_handler" => { "options" => {} }
+              }
             }
           }
         end
